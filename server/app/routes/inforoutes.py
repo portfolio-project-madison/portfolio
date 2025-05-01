@@ -29,17 +29,17 @@ def get_projects():
 def get_additional():
 
   return jsonify([
-        {"title": "Lucy", "link": url_for('static', filename='images/lucy.png', _external=True)},
-        {"title": "Chainsawman", "link": url_for('static', filename='images/Chainsawman.png', _external=True)},
-        {"title": "Inosuke", "link": url_for('static', filename='images/Inosuke-1.png', _external=True)},
-        {"title": "Gojo", "link": url_for('static', filename='images/Gojo_(2)-1[1].png', _external=True)},
-        {"title": "Soul Eater", "link": url_for('static', filename='images/soul eater [Recovered]-1.png', _external=True)},
-        {"title": "Ouran High School Host Club", "link": url_for('static', filename='images/ohshc_[Recovered]-1[1].png', _external=True)},
-        {"title": "Little Witch Academia", "link": url_for('static', filename='images/LWA [Recovered].png', _external=True)},
-        {"title": "Mystic Messenger", "link": url_for('static', filename='images/707.png', _external=True)},
-        {"title": "High Rise Invasion", "link": url_for('static', filename='images/mayu.png', _external=True)},
-        {"title": "Midari", "link": url_for('static', filename='images/Midari.png', _external=True)},
-        {"title": "Youtube", "link": "https://www.youtube.com/@silvxx-1247"},
+        {"type":"ai","title": "Lucy", "link": url_for('static', filename='images/lucy.png', _external=True)},
+        {"type":"ai","title": "Chainsawman", "link": url_for('static', filename='images/Chainsawman.png', _external=True)},
+        {"type":"ai","title": "Inosuke", "link": url_for('static', filename='images/Inosuke-1.png', _external=True)},
+        {"type":"ai","title": "Gojo", "link": url_for('static', filename='images/Gojo_(2)-1[1].png', _external=True)},
+        {"type":"ai","title": "Soul Eater", "link": url_for('static', filename='images/soul eater [Recovered]-1.png', _external=True)},
+        {"type":"ai","title": "Ouran High School Host Club", "link": url_for('static', filename='images/ohshc_[Recovered]-1[1].png', _external=True)},
+        {"type":"ai","title": "Little Witch Academia", "link": url_for('static', filename='images/LWA [Recovered].png', _external=True)},
+        {"type":"ai","title": "Mystic Messenger", "link": url_for('static', filename='images/707.png', _external=True)},
+        {"type":"ai","title": "High Rise Invasion", "link": url_for('static', filename='images/mayu.png', _external=True)},
+        {"type":"ai","title": "Midari", "link": url_for('static', filename='images/Midari.png', _external=True)},
+        {"type":"yt","title": "Youtube", "link": "https://www.youtube.com/@silvxx-1247"},
     ])
 
 @info_bp.route('/tech-competencies', methods = ['POST','GET'])
