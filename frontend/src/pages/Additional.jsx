@@ -18,8 +18,7 @@ export default function Additional(){
           }
         });
         setProjects(response.data)
-
-        console.log(response.data)
+        
         } catch (err) {
           setError(err.message);
         }
@@ -35,8 +34,8 @@ export default function Additional(){
       {projects.length > 0 ? (
         projects.filter(project => project.type === 'ai').map((project) => <li className='project_container'key={project.title}>{
           <div className='project'>
-            <img src={project.link} className='project-info' alt="project"/>
-            <p>{project.title}</p>
+            <img src={project.link} className='project-img' alt="project"/>
+            <p className="project-info">{project.title}</p>
           </div>
         }</li>)
       ) : (
