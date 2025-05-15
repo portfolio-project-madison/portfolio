@@ -55,6 +55,12 @@ html,body, #root {
   border-color:  #BCC8C0 black black #BCC8C0 ;
 }
 
+.star#1 {
+  position: relative;
+  top: 2rem;
+  right: 2rem
+}
+
 /* navbar */
 #navbar {
   margin-top: 2rem;

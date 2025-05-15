@@ -70,7 +70,7 @@ export default function Landing(){
   }, []);
 
   return (
-  <>
+  <div id='info-wrapper'>
   {/* socials */}
     <ul className='socials_container'>
       {socials.length > 0 ? (
@@ -86,20 +86,45 @@ export default function Landing(){
     </ul>
   {/* bio */}
       <div id='bio-container'>
+        <h1 id="bio-title"> about me!</h1>
         <p id='bio'>{bio.bio}</p>
+        <div className="star" id='1'>
+           <svg width="60" height="60" viewBox="0 0 100 100"> {/*star*/}
+          <polygon 
+            points="50,5 61,35 95,35 67,57 78,91 50,70 22,91 33,57 5,35 39,35" 
+            fill="#8F5E72" 
+            stroke="black" 
+            stroke-width="4" 
+            stroke-linejoin="round"
+            transform="rotate(30 50 50)" 
+          />
+        </svg>
+        </div>
+       
       </div>
   {/* competencies */}
-  <ul className='competencies_container'>
-      {competencies.length > 0 ? (
-        competencies.map((competency) => <li className='competency_container'key={competency.title}>{
-          <div className='competency'>
-            <p className='competency-info'>{competency.type}: {competency.title}</p>
-          </div>
-        }</li>)
+ 
+  <ul className='competencies_container'> 
+    <h1 id='tech-title'> technical competencies!</h1>
+      {competencies.length > 0 ? 
+        Object.entries(
+          competencies.reduce((acc, competency) => {
+            const {type,title} = competency
+            if(!acc[type]) acc[type] = []
+            acc[type].push(title)
+            return acc
+          }, {}))
+          .map(([type,titles]) => (
+            <div className="competency-container">
+              <p className='competency_line' key={type}>
+              <strong>{type}:</strong> {titles.join(', ')}
+            </p>
+            </div>
+          )
       ) : (
-        <p className="emptyMessage" >can't get competencies :/</p>
+          <p className="emptyMessage" >can't get competencies :/</p>
       )}
-    </ul>
-  </>
+  </ul>
+  </div>
   )
 }
