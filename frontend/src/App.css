@@ -1,1 +1,80 @@
+/* background */
+html,body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
 
+
+#background{
+  margin: 2rem;
+  padding: .2vh;
+  /* border: 2px solid whitesmoke;    */
+  box-shadow: 0 0 0 2px #BCC8C0;
+  width: calc(100% - 4rem); 
+  box-sizing: border-box;  
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 0;
+}
+
+
+
+.corner {
+  width: 5vw;
+  height: 8.5vh;
+  background-color: black;
+  position: absolute;
+  border: 2px solid #BCC8C0;
+  z-index: 1;
+}
+
+.top-left {
+  top: -2px;
+  left: -2px;
+  border-color: black #BCC8C0 #BCC8C0 black;
+}
+
+.top-right {
+  top: -2px;
+  right: -2px;
+  border-color: black black  #BCC8C0 #BCC8C0;
+}
+
+.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-color: #BCC8C0 #BCC8C0 black black;
+}
+
+.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-color:  #BCC8C0 black black #BCC8C0 ;
+}
+
+/* navbar */
+#navbar {
+  margin-top: 2rem;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  border: 0.2vh solid #BCC8C0;
+  padding: 1rem;
+}
+
+.nav-items {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+}

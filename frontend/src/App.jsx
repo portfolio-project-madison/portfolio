@@ -10,14 +10,19 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <>
+    <div id='background'>
+      <div className="corner top-left"></div>
+      <div className="corner top-right"></div>
+      <div className="corner bottom-left"></div>
+      <div className="corner bottom-right"></div>
+
         <Navbar/>
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/additional' element={<Additional />} />
         </Routes>
-    </>
+    </div>
   )
 }
 

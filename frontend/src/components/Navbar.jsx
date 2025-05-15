@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 export default function Landing(){
 
   return(
-  <>
-      <Link to="/">Home</Link> |{" "}
-      <Link to="/additional">Additional</Link> |{" "}
-      <Link to="/projects">Projects</Link> 
-      
-  </>
+  <div id = 'navbar'>
+    <div id='nav-items'> 
+      <Link to="/" className ='nav-item' >Home</Link> 
+      <Link to="/additional" className ='nav-item' >Additional</Link> 
+      <Link to="/projects" className ='nav-item' >Projects</Link> 
+    </div>
+  </div>
 )}

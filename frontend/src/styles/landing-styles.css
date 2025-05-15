@@ -1,0 +1,65 @@
+/*  socials */
+
+.socials_container{
+  width: 10vw;
+  padding: 5px;
+  margin: 5px
+}
+
+.social_container{
+  padding: 0%;
+  list-style-type: none;
+ }
+
+.social{
+  display: flex;
+  align-items: center;
+  margin: 0%;
+}
+
+.square{
+  background-color: #BCC8C0;
+  color:#BCC8C0;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #BCC8C0;
+  border-radius: 7px;
+  padding: 0%;
+  margin: 3px;
+}
+
+.social-info{
+margin-left: 7px;
+}
+
+/* bio */
+#bio-container{
+  display: flex;
+  margin-right: 5px;
+  border: 2px solid black;
+  background-color: #8BAAAD; 
+  border-radius: 14px;
+  width: 60vw;
+  height: 35vh;
+  margin-left: auto;
+  margin-right: 3px;
+}
+#bio{
+  width: 55vw;
+  height: 30vh;
+  margin: 2px;
+  padding: 3px;
+}
+/* competencies */
+
+.competencies_container{
+ background-color: #BCC8C0;
+ display: flex;
+ margin-right: auto;
+ margin-left: 3px;
+ width: 60vw;
+ height: 35vh;
+ border: 2px solid black;
+ border-radius: 14px;
+ flex-wrap: wrap;
+}

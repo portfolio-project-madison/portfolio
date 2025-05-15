@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/landing-styles.css'
 
 export default function Landing(){
   const [error, setError] = useState('')
@@ -75,6 +76,7 @@ export default function Landing(){
       {socials.length > 0 ? (
         socials.map((social) => <li className='social_container'key={social.title}>{
           <div className='social'>
+            <p className="square"> oh</p>
             <a href={social.link} className='social-info'>{social.title}</a>
           </div>
         }</li>)
@@ -83,7 +85,9 @@ export default function Landing(){
       )}
     </ul>
   {/* bio */}
-      <p>{bio.bio}</p>
+      <div id='bio-container'>
+        <p id='bio'>{bio.bio}</p>
+      </div>
   {/* competencies */}
   <ul className='competencies_container'>
       {competencies.length > 0 ? (
