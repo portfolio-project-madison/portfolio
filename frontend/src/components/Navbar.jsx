@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function Landing(){
+export default function Navbar(){
 
   return(
   <div id = 'navbar'>
