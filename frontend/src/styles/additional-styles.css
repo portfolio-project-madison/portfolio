@@ -1,0 +1,116 @@
+.projects-container{
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ✅ centers items horizontally */
+  gap: 1rem; /* optional spacing between cards */
+  padding: 0px
+}
+
+.project-container{
+  display: flex;
+  list-style: none;
+  flex-direction: column; /* ✅ stack image + bio vertically */
+  align-items: center; 
+}
+
+.project-img{
+ width: 40vw;
+ height: 65vh;
+ border: 5px solid black;
+ border-radius: 40px;
+ object-fit: cover;
+ box-shadow: 2px 2px 20px 2px rgba(139, 170, 173, 0.3);
+}
+
+.project{
+  width: 40.5vw;
+}
+
+#project-info{
+  background-color: #8F5E72;
+  padding: 1px;
+  padding-left: 3px;
+  border: 5px solid black;
+  border-radius: 40px;
+}
+
+.project-title{
+  font-size: larger;
+  font-style: italic;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.star{
+  z-index: 100;
+  width: 0;
+  height: 0;
+}
+.star.two svg{
+  z-index: 5;
+  position: relative;
+  top:31.2rem;
+  right:-33rem;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform:rotate(50deg);
+  width: 50px;
+  height: 50px;
+}
+
+.star.two polygon {
+  fill: #BCC8C0;
+}
+
+.star.twotwo svg{
+  z-index: 6;
+  position: relative;
+  bottom:6rem;
+  right:-34.4rem;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform:rotate(60deg);
+}
+
+.star.three svg{
+  z-index: 7;
+  position: relative;
+  top:-1rem;
+  left:-1.5rem;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform:rotate(30deg);
+
+}
+
+.star.four svg{
+  z-index: 8;
+  position: relative;
+  bottom:3.3rem;
+  left:-1.2rem;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform:rotate(90deg);
+  
+}
+
+.star.four polygon {
+  fill: #8BAAAD;
+}
+.star.five svg{
+  z-index: 9;
+  position: relative;
+  bottom:30rem;
+  right:-35rem;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform:rotate(20deg);
+  width: 50px;
+  height: 50px;
+}
+
+.star.five polygon {
+  fill: #8BAAAD;
+}

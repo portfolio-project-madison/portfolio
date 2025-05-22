@@ -64,10 +64,16 @@ html,body, #root {
   border-color:  #BCC8C0 black black #BCC8C0 ;
 }
 
-.star#1 {
+.star svg {
+  transform-origin: center;
+  transform-box: fill-box; /* or view-box */
+}
+
+.star#one {
   position: relative;
   top: 2rem;
-  right: 2rem
+  right: 2rem;
+  transform:rotate(30deg);
 }
 
 /* navbar */
@@ -140,14 +146,14 @@ html,body, #root {
   0 -3.5px #BCC8C0;
   font-size: 5rem;
   position: relative;
-  top: -4rem;
+  top: -5rem;
   margin-top: 0; /* adjust this for overlap */
   z-index: 2;
 }
 
 #ex.logo-item {
   position: relative;
-  top: 5rem;
+  top: -2rem;
   color: black;
   text-shadow:
   3.5px 0 #8F5E72,

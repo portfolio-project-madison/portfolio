@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/landing-styles.css'
+import Star from '../components/Star'
 
 export default function Landing(){
   const [error, setError] = useState('')
@@ -88,22 +89,17 @@ export default function Landing(){
       <div id='bio-container'>
         <h1 id="bio-title"> about me!</h1>
         <p id='bio'>{bio.bio}</p>
-        <div className="star" id='1'>
-           <svg width="60" height="60" viewBox="0 0 100 100"> {/*star*/}
-          <polygon 
-            points="50,5 61,35 95,35 67,57 78,91 50,70 22,91 33,57 5,35 39,35" 
-            fill="#8F5E72" 
-            stroke="black" 
-            stroke-width="4" 
-            stroke-linejoin="round"
-            transform="rotate(30 50 50)" 
-          />
-        </svg>
+        <Star id='one'/>
+      </div>
+
+  {/* me */}
+      <div id='me-container'>
+        <div id="me-img"></div>
+        <div id='me-text-container'>
+          <p id="me-text">software engineer!</p>
         </div>
-       
       </div>
   {/* competencies */}
- 
   <ul className='competencies_container'> 
     <h1 id='tech-title'> technical competencies!</h1>
       {competencies.length > 0 ? 
