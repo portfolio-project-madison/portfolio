@@ -53,7 +53,12 @@ export default function Additional(){
       )}
       {projects.length > 0 ? (
         <div id='yt-box'>
-          <a href={projects[projects.length-1].link}> youtube! </a>
+          <img src={projects[projects.length-1].img} id="yt-img" alt="yt-project"/>
+          <div id="yt-text-column">
+            <a href={projects[projects.length-1].link} id="yt-text"> youtube! </a>
+            <p>{projects[projects.length-1].bio}</p>
+          </div>
+
         </div>
       ) : (
         <p className="emptyMessage" >can't get youtube :/</p>
