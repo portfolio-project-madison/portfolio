@@ -1,0 +1,47 @@
+.tech-projects-container{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
+ align-items: center;
+ background-color: aquamarine;
+}
+
+.tech-project-container{
+  padding-top: 4rem;
+  justify-content: center;
+  background-color: blueviolet;
+  width: 70vw;
+  padding-bottom: 1rem;
+}
+
+#tech-img{
+  margin-top: 0%;
+  width: 20vw;
+  height: 25vh;
+  border: 5px solid #8BAAAD;
+  border-radius: 40px;
+  object-fit: cover;
+  object-position: center -3rem; 
+  box-shadow: 2px 2px 20px 2px rgba(139, 170, 173, 0.3);
+}
+
+#tech-project-title{
+  font-size: larger;
+  font-style: italic;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#tech-project-title:hover{
+  color: #8F5E72;
+}
+
+#tech-project-info{
+  margin-top: 0%;
+  padding-left: 1rem; 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

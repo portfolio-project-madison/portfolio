@@ -75,10 +75,16 @@ font-size: 1.4rem;
   margin-right: 3px;
 }
 #bio{
+  position: relative;
+  top:2rem;
+  left: 2.3rem;
   width: 55vw;
   height: 30vh;
   margin: 2px;
   padding: 5px;
+  font-size: larger;
+  white-space: pre-wrap;
+  text-shadow: 5px 5px 5px rgba(71, 121, 125, 0.5);
 }
 
 /* me */
@@ -128,10 +134,11 @@ font-size: 1.4rem;
   -3.5px 0 #BCC8C0,
   0 3.5px #BCC8C0,
   0 -3.5px #BCC8C0;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   bottom: -5.1rem;
   left: 3rem;
+  margin-top: 0%;
 }
 
 
@@ -140,28 +147,34 @@ font-size: 1.4rem;
   top: -27rem;
   background-color: #BCC8C0;
   display: flex;
-  margin-right: auto;
-  margin-left: 3px;
   width: 60vw;
   height: 40vh;
   border: 5px solid black;
   border-radius: 40px;
   flex-wrap: wrap;
-  padding: 5px;
-  margin-bottom: 100px;
+
+  padding: 0px;
+  padding-left: 5px;
+
+  margin-right: auto;
+  margin-left: 3px;
+  margin-bottom: 0px;
+  
   z-index: 1;
 }
 
 .competency_line{
   font-size: 1.5rem;
   padding: 0px;
-  height: 2vh;
+  padding-bottom: 0px;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
-  line-height: 1.2
+  text-shadow: 5px 5px 5px rgba(114, 121, 116, 0.5);
 }
 
 .competency-container{
   display: flex;
   margin: 0px;
-  height: 5vh;
+  padding: 0px;
+  margin: 0px;
 }

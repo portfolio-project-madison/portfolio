@@ -64,6 +64,9 @@ html,body, #root {
   border-color:  #BCC8C0 black black #BCC8C0 ;
 }
 
+.star{
+  filter: drop-shadow(2px 2px 7px rgba(188, 200, 192, 0.3))
+}
 .star svg {
   transform-origin: center;
   transform-box: fill-box; /* or view-box */

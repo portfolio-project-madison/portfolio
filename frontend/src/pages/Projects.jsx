@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/project-styles.css'
 
 export default function Projects(){
   const [error,setError] = useState('')
@@ -29,11 +30,13 @@ export default function Projects(){
   return (
   <>
     {/* software projects */}
-    <ul className='tech-projects_container'>
+    <ul className='tech-projects-container'>
       {techProjects.length > 0 ? (
-        techProjects.map((techProjects) => <li className='tech-projects_container'key={techProjects.title}>{
-          <div className='techProjects'>
-            <a href={techProjects.link} className='techProjects-info'>{techProjects.title}</a>
+        techProjects.map((techProject) => <li className='tech-project-container'key={techProjects.title}>{
+          <div className='techProject'>
+            <div id="tech-img"></div>
+            <a href={techProject.link} className='tech-project-info' id='tech-project-title'>{techProject.title}</a>
+            <p className="tech-project-info" id='tech-project-bio'>{techProject.bio}</p>
           </div>
         }</li>)
       ) : (

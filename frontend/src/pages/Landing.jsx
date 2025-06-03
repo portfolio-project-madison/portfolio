@@ -61,7 +61,7 @@ export default function Landing(){
           }
          
         }); 
-        setBio(response.data[0])
+        setBio(response.data)
       
         } catch (err) {
           setError(err.message);
