@@ -33,10 +33,12 @@ export default function Projects(){
     <ul className='tech-projects-container'>
       {techProjects.length > 0 ? (
         techProjects.map((techProject) => <li className='tech-project-container'key={techProjects.title}>{
-          <div className='techProject'>
+          <div className='tech-project'>
             <div id="tech-img"></div>
-            <a href={techProject.link} className='tech-project-info' id='tech-project-title'>{techProject.title}</a>
-            <p className="tech-project-info" id='tech-project-bio'>{techProject.bio}</p>
+            <div id="project-column">
+              <a href={techProject.link} className='tech-project-title'>{techProject.title}</a>
+              <p className="tech-project-bio" >{techProject.bio}</p>
+            </div>
           </div>
         }</li>)
       ) : (

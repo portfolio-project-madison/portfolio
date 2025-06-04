@@ -3,15 +3,22 @@
  flex-wrap: wrap;
  flex-direction: column;
  align-items: center;
- background-color: aquamarine;
 }
 
 .tech-project-container{
   padding-top: 4rem;
   justify-content: center;
-  background-color: blueviolet;
   width: 70vw;
   padding-bottom: 1rem;
+  list-style-type: none;
+}
+
+.tech-project{
+  background-color: #8BAAAD;
+  border: 5px solid black;
+  border-radius: 40px;
+  display: flex;
+  justify-content: baseline;
 }
 
 #tech-img{
@@ -25,7 +32,15 @@
   box-shadow: 2px 2px 20px 2px rgba(139, 170, 173, 0.3);
 }
 
-#tech-project-title{
+#project-column{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  padding: 1rem;
+}
+
+.tech-project-title{
   font-size: larger;
   font-style: italic;
   font-weight: bolder;
@@ -38,10 +53,8 @@
   color: #8F5E72;
 }
 
-#tech-project-info{
-  margin-top: 0%;
-  padding-left: 1rem; 
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.tech-project-bio{
+  color: whitesmoke;
+  text-shadow: 5px 5px 5px rgba(71, 121, 125, .5);
+  white-space: pre-wrap;
 }

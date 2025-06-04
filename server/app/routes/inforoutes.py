@@ -19,9 +19,9 @@ def get_socials():
 def get_projects():
 
   return jsonify([
-        {"title": "Burgle", "link": "https://github.com/BurgleProject/Project","bio":"lots of text"},
-        {"title": "Pacemates", "link": "https://github.com/CivicTechMM/PaceMates","bio":"lots of text"},
-        {"title": "Burgl!:Remastered!", "link": "https://github.com/burgle-remastered/burgle-remastered-project","bio":"lots of text"}
+        {"title": "Burgl!:Remastered!", "link": "https://github.com/burgle-remastered/burgle-remastered-project","bio":"Burgl!:Remastered! is the improved Burgle!; An interactive journaling app aimed to empower neurodivergent individuals. We use the components of a burger to structure your day, as well as a daily spoon count to measure your energy levels. We used 3D props you can spin around to get you addicted to this good habit! \n\nTechnologies Used: html, css, React, Javascript, Figma, Python, Blender, ThreeJs, Flask, React Three Fiber, Postgressql"},
+        {"title": "Pacemates", "link": "https://github.com/CivicTechMM/PaceMates","bio":"PaceMates is a running app created to support those struggling with mental health \n\nTechnologies Used: html, css, React, Javascript, Figma, Express, Postgressql, Knex"},
+        {"title": "Burgle", "link": "https://github.com/BurgleProject/Project","bio":"Burgle! is the original of \"Burgl!:Remastered!\". This project was essentially the prototype, made before we deepened our skills further. \n\nTechnologies Used: html, css, React, Javascript, Figma"}    
     ])
 
 @info_bp.route('/additional-projects', methods = ['POST','GET'])
@@ -49,9 +49,9 @@ def get_competencies():
   return jsonify([
         {"title": "Javascript", "type": "Languages and Databases"},
         {"title": "Python", "type": "Languages and Databases"},
-        {"title": "HTML", "type": "Languages and Databases"},
-        {"title": "CSS", "type": "Languages and Databases"},
-        {"title": "SQL", "type": "Languages and Databases"},
+        {"title": "Html", "type": "Languages and Databases"},
+        {"title": "Css", "type": "Languages and Databases"},
+        {"title": "sql", "type": "Languages and Databases"},
         {"title": "Unity", "type": "Languages and Databases"},
         {"title": "Git", "type": "Tools and Testing"},
         {"title": "OOP", "type": "Tools and Testing"},
