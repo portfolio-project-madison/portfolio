@@ -18,10 +18,7 @@ def create_app():
             return send_from_directory(app.static_folder, path)
         else:
             return send_from_directory(app.static_folder, 'index.html')
+    # Register Blueprints
 
-
-# Register Blueprints
-    # app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(info_bp, url_prefix='/info')
-    
     return app
