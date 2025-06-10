@@ -8,12 +8,12 @@ export default function Landing(){
   const [error, setError] = useState('')
   const [socials, setSocials] = useState([])
   const [competencies, setCompetencies] = useState([])
-  const [bio, setBio] = useState('')
+  const [bio, setBio] = useState([])
 ////socials////
   useEffect(() => {
     const fetchSocials = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5000/info/social`, {
+        const response = await axios.get(`http://127.0.0.1:5001/info/social`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export default function Landing(){
   useEffect(() => {
     const fetchCompetencies = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5000/info/tech-competencies`, {
+        const response = await axios.get(`http://127.0.0.1:5001/info/tech-competencies`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export default function Landing(){
   useEffect(() => {
     const fetchBio = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5000/info/bio`, {
+        const response = await axios.get(`http://127.0.0.1:5001/info/bio`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -77,8 +77,8 @@ export default function Landing(){
       {socials.length > 0 ? (
         socials.map((social) => <li className='social_container'key={social.title}>{
           <div className='social'>
-            <p className="square"> oh</p>
-            <a href={social.link} className='social-info'>{social.title}</a>
+            <img src={social.img} className="square"/>
+            <a href={social.title.toLowerCase() === 'email' ? `mailto:${social.link}` : social.link} className='social-info'>{social.title}</a>
           </div>
         }</li>)
       ) : (
@@ -89,18 +89,18 @@ export default function Landing(){
       <div id='bio-container'>
         <h1 id="bio-title"> about me!</h1>
         <p id='bio'>{bio.bio}</p>
-        <Star id='one'/>
+        <Star className='one'/>
       </div>
 
   {/* me */}
       <div id='me-container'>
-        <div id="me-img"></div>
+        <img src={bio.img} id="me-img"/>
         <div id='me-text-container'>
           <p id="me-text">software engineer!</p>
         </div>
       </div>
   {/* competencies */}
-  <ul className='competencies_container'> 
+  <div className='competencies_container'> 
     <h1 id='tech-title'> technical competencies!</h1>
       {competencies.length > 0 ? 
         Object.entries(
@@ -111,7 +111,7 @@ export default function Landing(){
             return acc
           }, {}))
           .map(([type,titles]) => (
-            <div className="competency-container">
+            <div className="competency_container">
               <p className='competency_line' key={type}>
               <strong>{type}:</strong> {titles.join(', ')}
             </p>
@@ -120,7 +120,7 @@ export default function Landing(){
       ) : (
           <p className="emptyMessage" >can't get competencies :/</p>
       )}
-  </ul>
+  </div>
   </div>
   )
 }

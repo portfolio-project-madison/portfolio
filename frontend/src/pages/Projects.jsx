@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/project-styles.css'
+import Star from '../components/Star'
 
 export default function Projects(){
   const [error,setError] = useState('')
@@ -11,7 +12,7 @@ export default function Projects(){
   useEffect(() => {
     const fetchTechProjects = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5000/info/software-projects`, {
+        const response = await axios.get(`http://127.0.0.1:5001/info/software-projects`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -34,7 +35,9 @@ export default function Projects(){
       {techProjects.length > 0 ? (
         techProjects.map((techProject) => <li className='tech-project-container'key={techProjects.title}>{
           <div className='tech-project'>
-            <div id="tech-img"></div>
+            <Star className="ten"/>
+            <Star className="nine"/>
+            <img src={techProject.img} className="tech-img" id={techProject.title}/>
             <div id="project-column">
               <a href={techProject.link} className='tech-project-title'>{techProject.title}</a>
               <p className="tech-project-bio" >{techProject.bio}</p>

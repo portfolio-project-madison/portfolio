@@ -20,7 +20,6 @@
  border: 5px solid black;
  border-radius: 40px;
  object-fit: cover;
- box-shadow: 2px 2px 20px 2px rgba(139, 170, 173, 0.3);
 }
 
 .project{
@@ -29,15 +28,19 @@
 }
 
 #project-info{
+  font-family: 'MyFontBody';
   background-color: #8F5E72;
   padding: 1px;
   padding-left: 1rem;
   border: 5px solid black;
   border-radius: 40px;
   min-height: 180px;
+  font-size: 1.2rem;
+  /* box-shadow: 2px 2px 20px 7px rgba(143, 94, 114, 0.3); */
 }
 
 .project-title{
+  font-family: 'MyFont';
   font-size: larger;
   font-style: italic;
   font-weight: bolder;
@@ -72,7 +75,8 @@
 }
 
 #yt-text{
-  font-size: larger;
+  font-family: 'MyFont';
+  font-size: 2rem;
   font-style: italic;
   font-weight: bolder;
   letter-spacing: 1px;
@@ -85,6 +89,8 @@
 }
 
 #yt-text-column{
+  font-family: 'MyFontBody';
+  font-size: 1.2rem;
   margin-top: 0%;
   padding-left: 1rem;
   width: 52vw;

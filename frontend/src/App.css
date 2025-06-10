@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'MyFont';
-  src: url('http://127.0.0.1:5000/static/fonts/JacquardaBastarda9-Regular.ttf') format('truetype');
+  src: url('http://127.0.0.1:5001/static/fonts/JacquardaBastarda9-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyFontBody';
+  src: url('http://127.0.0.1:5001/static/fonts/Tiny5-Regular.ttf') format('truetype');
 }
 
 body {

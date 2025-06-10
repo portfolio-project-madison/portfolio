@@ -1,3 +1,5 @@
+
+
 .tech-projects-container{
  display: flex;
  flex-wrap: wrap;
@@ -19,18 +21,19 @@
   border-radius: 40px;
   display: flex;
   justify-content: baseline;
+  align-items: center;
 }
 
-#tech-img{
+.tech-img{
   margin-top: 0%;
-  width: 20vw;
-  height: 25vh;
+  margin-left: .1rem;
+  width: 20rem;
+  height: 15rem;
   border: 5px solid #8BAAAD;
   border-radius: 40px;
   object-fit: cover;
-  object-position: center -3rem; 
-  box-shadow: 2px 2px 20px 2px rgba(139, 170, 173, 0.3);
 }
+
 
 #project-column{
   display: flex;
@@ -41,7 +44,8 @@
 }
 
 .tech-project-title{
-  font-size: larger;
+  z-index: 100;
+  font-size: 1.3rem;
   font-style: italic;
   font-weight: bolder;
   letter-spacing: 1px;
@@ -57,4 +61,31 @@
   color: whitesmoke;
   text-shadow: 5px 5px 5px rgba(71, 121, 125, .5);
   white-space: pre-wrap;
+  font-family: 'MyFontBody';
+  font-size: 1.1rem;
+}
+
+.star.ten {
+  z-index: 5;
+  position: relative;
+  bottom:11rem;
+  left:4rem;
+  transform:rotate(60deg);
+}
+
+.star.nine svg {
+  width: 45px;
+  height: 45px;
+}
+
+.star.nine {
+  z-index: 5;
+  position: relative;
+  bottom:2.5rem;
+  left:-2rem;
+  transform:rotate(-60deg);
+}
+
+.star.nine polygon {
+ fill: #BCC8C0;
 }

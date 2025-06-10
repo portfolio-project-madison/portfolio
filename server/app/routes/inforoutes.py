@@ -8,10 +8,10 @@ info_bp = Blueprint('info', __name__)
 def get_socials():
 
   return jsonify([
-        {"title": "LinkedIn", "link": "https://www.linkedin.com/in/madison-tolentino-293139257/"},
-        {"title": "Github", "link": "https://github.com/madisonnnn"},
-        {"title": "Dev.To", "link": "https://dev.to/madison_tolentino_d23fca7"},
-        {"title": "Email", "link": "madisontolentino@gmail.com"}
+        {"img":url_for('static', filename='images/linkedin.png', _external=True),"title": "LinkedIn", "link": "https://www.linkedin.com/in/madison-tolentino-293139257/"},
+        {"img":url_for('static', filename='images/github.png', _external=True),"title": "Github", "link": "https://github.com/madisonnnn"},
+        {"img":url_for('static', filename='images/devto.png', _external=True),"title": "Dev.To", "link": "https://dev.to/madison_tolentino_d23fca7"},
+        {"img":url_for('static', filename='images/gmail.png', _external=True),"title": "Email", "link": "madisontolentino@gmail.com"}
     ])
 
 @info_bp.route('/software-projects', methods = ['POST','GET'])
@@ -19,9 +19,9 @@ def get_socials():
 def get_projects():
 
   return jsonify([
-        {"title": "Burgl!:Remastered!", "link": "https://github.com/burgle-remastered/burgle-remastered-project","bio":"Burgl!:Remastered! is the improved Burgle!; An interactive journaling app aimed to empower neurodivergent individuals. We use the components of a burger to structure your day, as well as a daily spoon count to measure your energy levels. We used 3D props you can spin around to get you addicted to this good habit! \n\nTechnologies Used: html, css, React, Javascript, Figma, Python, Blender, ThreeJs, Flask, React Three Fiber, Postgressql"},
-        {"title": "Pacemates", "link": "https://github.com/CivicTechMM/PaceMates","bio":"PaceMates is a running app created to support those struggling with mental health \n\nTechnologies Used: html, css, React, Javascript, Figma, Express, Postgressql, Knex"},
-        {"title": "Burgle", "link": "https://github.com/BurgleProject/Project","bio":"Burgle! is the original of \"Burgl!:Remastered!\". This project was essentially the prototype, made before we deepened our skills further. \n\nTechnologies Used: html, css, React, Javascript, Figma"}    
+        {"img":url_for('static', filename='images/burgl.jpeg', _external=True),"title": "Burgl!:Remastered!", "link": "https://github.com/burgle-remastered/burgle-remastered-project","bio":"Burgl!:Remastered! is the improved Burgle!; An interactive journaling app aimed to empower neurodivergent individuals. We use the components of a burger to structure your day, as well as a daily spoon count to measure your energy levels. We used 3D props you can spin around to get you addicted to this good habit! \n\nTechnologies Used: html, css, React, Javascript, Figma, Python, Blender, ThreeJs, Flask, React Three Fiber, Postgressql"},
+        {"img":url_for('static', filename='images/pacemates.png', _external=True),"title": "Pacemates", "link": "https://github.com/CivicTechMM/PaceMates","bio":"PaceMates is a running app created to support those struggling with mental health. Our website provides a safe space where individuals can join communities and create/participate in events based on common athletic interests. \n\nTechnologies Used: html, css, React, Javascript, Figma, Express, Postgressql, Knex"},
+        {"img":url_for('static', filename='images/burgle.jpeg', _external=True),"title": "Burgle!", "link": "https://github.com/BurgleProject/Project","bio":"Burgle! is the original of \"Burgl!:Remastered!\". This project was essentially the prototype, made before we deepened our skills further. This is a less complex version, which also features a daily burger and spoon count for your journaling needs. \n\nTechnologies Used: html, css, React, Javascript, Figma"}    
     ])
 
 @info_bp.route('/additional-projects', methods = ['POST','GET'])
@@ -73,5 +73,5 @@ def get_competencies():
 def get_bio():
 
   return jsonify(
-        {"bio": "Hi, I'm Madison! A full-stack software engineer and a recent alumni of The Marcy Lab School! I am a Hispanic, Non-Binary person from the Bronx, and I love using technology to express myself! So I'd like to use this of my portfolio as a representation of me and my personality. \n\nFirstly, I will be showing off my technical competencies and what I have experience in! Next, I have a page showing my adobe illustrator projects and my youtube channel. adobe illustrator is design software tool mostly used by graphic designers; but I decided to give it my own purpose and started creating art from my favorite animes/games! Lastly I have some of my most recent technical projects that I would like to share :) \n\nHave a nice day!!!"}
+        {"img":url_for('static', filename='images/me.JPG', _external=True),"bio": "Hi, I'm Madison! A full-stack software engineer and a recent alumni of The Marcy Lab School! I am a Hispanic, Non-Binary person from the Bronx, and I love using technology to express myself! So I'd like to use this of my portfolio as a representation of me and my personality. \n\nFirstly, I will be showing off my technical competencies and what I have experience in! Next, I have a page showing my adobe illustrator projects and my youtube channel. adobe illustrator is design software tool mostly used by graphic designers; but I decided to give it my own purpose and started creating art from my favorite animes/games! Lastly I have some of my most recent technical projects that I would like to share :) \n\nHave a nice day!!!"}
     )
