@@ -12,7 +12,7 @@ export default function Projects(){
   useEffect(() => {
     const fetchTechProjects = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/info/software-projects`, {
+        const response = await axios.get(`/info/software-projects`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",

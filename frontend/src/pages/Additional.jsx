@@ -12,7 +12,7 @@ export default function Additional(){
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/info/additional-projects`, {
+        const response = await axios.get(`/info/additional-projects`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",

@@ -13,7 +13,7 @@ export default function Landing(){
   useEffect(() => {
     const fetchSocials = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/info/social`, {
+        const response = await axios.get(`/info/social`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export default function Landing(){
   useEffect(() => {
     const fetchCompetencies = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/info/tech-competencies`, {
+        const response = await axios.get(`/info/tech-competencies`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export default function Landing(){
   useEffect(() => {
     const fetchBio = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:5001/info/bio`, {
+        const response = await axios.get(`/info/bio`, {
           withCredentials: true,
           headers: {
             "Content-Type": "application/json",
