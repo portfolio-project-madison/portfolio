@@ -5,7 +5,7 @@ from flask_cors import CORS, cross_origin
 from server.app.routes.inforoutes import info_bp
 
 def create_app():
-    app = Flask(__name__,  static_folder='static', static_url_path='')
+    app = Flask(__name__,  static_folder='frontend/dist', static_url_path='')
     CORS(app)
   
     # Initialize extensions with the app
