@@ -4,7 +4,7 @@ from flask_cors import cross_origin
 info_bp = Blueprint('info', __name__)
 
 @info_bp.route('/social', methods = ['POST','GET'])
-@cross_origin(methods=['POST','GET'], supports_credentials=True, origin='http://127.0.0.1:5000')
+@cross_origin(methods=['POST','GET'], supports_credentials=True, origins=['http://127.0.0.1:5000', "https://madison-vrk3.onrender.com"])
 def get_socials():
 
   return jsonify([
@@ -15,7 +15,7 @@ def get_socials():
     ])
 
 @info_bp.route('/software-projects', methods = ['POST','GET'])
-@cross_origin(methods=['POST','GET'], supports_credentials=True, origin='http://127.0.0.1:5000')
+@cross_origin(methods=['POST','GET'], supports_credentials=True, origins=['http://127.0.0.1:5000', "https://madison-vrk3.onrender.com"])
 def get_projects():
 
   return jsonify([
@@ -25,7 +25,7 @@ def get_projects():
     ])
 
 @info_bp.route('/additional-projects', methods = ['POST','GET'])
-@cross_origin(methods=['POST','GET'], supports_credentials=True, origin='http://127.0.0.1:5000')
+@cross_origin(methods=['POST','GET'], supports_credentials=True, origins=['http://127.0.0.1:5000', "https://madison-vrk3.onrender.com"])
 def get_additional():
 
   return jsonify([
@@ -43,7 +43,7 @@ def get_additional():
     ])
 
 @info_bp.route('/tech-competencies', methods = ['POST','GET'])
-@cross_origin(methods=['POST','GET'], supports_credentials=True, origin='http://127.0.0.1:5000')
+@cross_origin(methods=['POST','GET'], supports_credentials=True, origins=['http://127.0.0.1:5000', "https://madison-vrk3.onrender.com"])
 def get_competencies():
 
   return jsonify([
@@ -69,7 +69,7 @@ def get_competencies():
     ])
 
 @info_bp.route('/bio', methods = ['POST','GET'])
-@cross_origin(methods=['POST','GET'], supports_credentials=True, origin='http://127.0.0.1:5000')
+@cross_origin(methods=['POST','GET'], supports_credentials=True, origins=['http://127.0.0.1:5000', "https://madison-vrk3.onrender.com"])
 def get_bio():
 
   return jsonify(
